@@ -1,81 +1,83 @@
-# WebApp boilerplate with React JS and Flask API
+<!-- Banner -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5C258D,100:4389A2&height=180&section=header&text=Beacon%20🚨&fontSize=40&fontAlign=50&fontColor=ffffff" alt="banner"/>
+</p>
 
-Build web applications using React.js for the front end and python/flask for your backend API.
+<h3 align="center">Report urban issues in your city — quickly and anonymously</h3>
 
-- Documentation can be found here: https://4geeks.com/docs/start/react-flask-template
-- Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
-- Integrated with Pipenv for package managing.
-- Fast deployment to Render [in just a few steps here](https://4geeks.com/docs/start/deploy-to-render-com).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" />
+</p>
 
-### 1) Installation:
+---
 
-> If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
+## 📌 Overview
 
-It is recomended to install the backend first, make sure you have Python 3.10, Pipenv and a database engine (Posgress recomended)
+**Beacon** is a web application that allows users to report imperfections or problems in their city, such as potholes, broken streetlights, or abandoned vehicles — easily, anonymously, and in just a few clicks.
 
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
+This app was created as the final project of the 4Geeks Academy Full Stack Developer Bootcamp, and is currently under development and improvement.
 
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
+---
 
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
+## 🚀 Features
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
+- 📍 Location-based reports
+- 📝 Anonymous or authenticated submissions
+- 🖼️ Upload of photos with Cloudinary
+- 🔐 JWT + Firebase authentication
+- 🌐 RESTful API backend
+- 🧩 Responsive and user-friendly interface
 
-### Undo a migration
+---
 
-You are also able to undo a migration by running
+## 🛠️ Tech Stack
 
-```sh
-$ pipenv run downgrade
-```
+**Frontend:**
 
-### Backend Populate Table Users
+- JavaScript
+- React
+- HTML, CSS
+- Bootstrap
 
-To insert test users in the database execute the following command:
+**Backend:**
 
-```sh
-$ flask insert-test-users 5
-```
+- Python
+- Flask
+- RESTful APIs
 
-And you will see the following message:
+**Database:**
 
-```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
-```
+- PostgreSQL
+- SQLAlchemy
+- Neon
 
-### **Important note for the database and the data inside it**
+**Authentication:**
 
-Every Github codespace environment will have **its own database**, so if you're working with more people eveyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
+- JWT
+- Firebase
 
-### Front-End Manual Installation:
+**Third-party services:**
 
--   Make sure you are using node version 20 and that you have already successfully installed and runned the backend.
+- Cloudinary
+- Render
 
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
+**Version control:**
 
-## Publish your website!
+- Git & GitHub
 
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://4geeks.com/docs/start/deploy-to-render-com).
+---
 
-### Contributors
+## 📷 Screenshots
 
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+> *(Add screenshots or GIFs here when ready)*
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/tu-usuario/beacon.git
+cd beacon
